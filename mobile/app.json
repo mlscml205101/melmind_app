@@ -1,0 +1,56 @@
+{
+  "expo": {
+    "name": "MelMind",
+    "slug": "melmind",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.melmind.app",
+      "infoPlist": {
+        "NSMotionUsageDescription": "MelMind günlük adımlarınızı saymak için hareket sensörünü kullanır."
+      }
+    },
+    "android": {
+      "package": "com.melmind.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.ACTIVITY_RECOGNITION"
+      ],
+      "adaptiveIcon": {
+        "backgroundColor": "#E8F5EE",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "MelMind, ürün barkodlarını okumak ve öğün fotoğrafı çekmek için kameranızı kullanır."
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Öğün fotoğrafı seçmek için galerinize erişim gerekir.",
+          "cameraPermission": "Öğün fotoğrafı çekmek için kamera gerekir."
+        }
+      ],
+      [
+        "expo-sensors",
+        {
+          "motionPermission": "MelMind günlük adımlarınızı saymak için hareket sensörünü kullanır."
+        }
+      ],
+      "expo-notifications",
+      "expo-status-bar"
+    ],
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
